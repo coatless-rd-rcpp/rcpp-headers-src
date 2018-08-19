@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 
-// Load subdirectory header files
+// Load src/ directory header files
 #include "routineA.h"
 #include "routineB.h"
 
