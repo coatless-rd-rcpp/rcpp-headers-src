@@ -6,12 +6,12 @@
 \alias{SrcDir-package}
 \title{SrcDir: Embedding Multiple Code Files in Src}
 \description{
-Provides an implementation showing how multiple compiled code
-    files in the `src` directory can be used.
+Provides an implementation showing how multiple compiled code files in the `src` directory can be used.
 }
 \seealso{
 Useful links:
 \itemize{
+  \item \url{https://rd.thecoatlessprofessor.com/rcpp-headers-src/}
   \item Report bugs at \url{https://github.com/r-pkg-examples/rcpp-headers-src}
 }
 
