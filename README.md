@@ -1,7 +1,7 @@
 ## Separating Compiled Code into Individual Units with Headers
 
 <!-- badges: start -->
-[![R-CMD-check](https://github.com/coatless-r-n-d/rcpp-headers-src/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-r-n-d/rcpp-headers-src/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/coatless-rd-rcpp/rcpp-headers-src/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/coatless-rd-rcpp/rcpp-headers-src/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The `SrcDir` R package provides an example of using header files to split 

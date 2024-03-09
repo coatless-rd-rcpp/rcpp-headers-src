@@ -5,7 +5,8 @@ Version: 0.0.0.9000
 Authors@R: person("James", "Balamuta", email = "balamut2@illinois.edu", role = c("aut", "cre"))
 Description: Provides an implementation showing how multiple compiled code
     files in the `src` directory can be used.
-BugReports: https://github.com/r-pkg-examples/rcpp-headers-src
+BugReports: https://github.com/coatless-rd-rcpp/rcpp-headers-src/issues
+URL: https://rd-rcpp.thecoatlessprofessor.com/rcpp-headers-src/, https://github.com/coatless-rd-rcpp/rcpp-headers-src
 Depends: R (>= 4.3.0)
 Imports: Rcpp (>= 1.0.12)
 LinkingTo: Rcpp
@@ -14,4 +15,3 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
-URL: https://rd.thecoatlessprofessor.com/rcpp-headers-src/

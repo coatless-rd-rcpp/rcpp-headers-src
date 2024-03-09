@@ -11,8 +11,9 @@ Provides an implementation showing how multiple compiled code files in the `src`
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://rd.thecoatlessprofessor.com/rcpp-headers-src/}
-  \item Report bugs at \url{https://github.com/r-pkg-examples/rcpp-headers-src}
+  \item \url{https://rd-rcpp.thecoatlessprofessor.com/rcpp-headers-src/}
+  \item \url{https://github.com/coatless-rd-rcpp/rcpp-headers-src}
+  \item Report bugs at \url{https://github.com/coatless-rd-rcpp/rcpp-headers-src/issues}
 }
 
 }
