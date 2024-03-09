@@ -42,8 +42,8 @@ guides.
 With a compiler in hand, one can then install the package from GitHub by:
 
 ```r
-# install.packages("devtools")
-devtools::install_github("r-pkg-examples/rcpp-headers-src")
+# install.packages("remotes")
+remotes::install_github("coatless-rd-rcpp/rcpp-headers-src")
 library("SrcDir")
 ```
 
