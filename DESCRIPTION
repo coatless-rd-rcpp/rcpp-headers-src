@@ -8,7 +8,7 @@ Description: Provides an implementation showing how multiple compiled code
 BugReports: https://github.com/coatless-rd-rcpp/rcpp-headers-src/issues
 URL: https://rd-rcpp.thecoatlessprofessor.com/rcpp-headers-src/, https://github.com/coatless-rd-rcpp/rcpp-headers-src
 Depends: R (>= 4.3.0)
-Imports: Rcpp (>= 1.0.12)
+Imports: Rcpp (>= 1.1.1)
 LinkingTo: Rcpp
 License: GPL (>= 2)
 Encoding: UTF-8
