@@ -26,7 +26,7 @@ src/
     |-> routineB.h
 ```
 
-For further organization, see the [SubdirSrc](https://github.com/r-pkg-examples/rcpp-headers-subdirs)
+For further organization, see the [SubdirSrc][subdirsrc]
 package for an example of compiling code found in `src/` subdirectories 
 (e.g. `src/A`, `src/B`).
 
@@ -34,9 +34,9 @@ package for an example of compiling code found in `src/` subdirectories
 
 To install the package, you must first have a compiler on your system that is 
 compatible with R. For help on obtaining a compiler consult either
-[macOS](http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/)
+[macOS][compiler-macos]
 or 
-[Windows](http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/)
+[Windows][compiler-windows]
 guides.
 
 With a compiler in hand, one can then install the package from GitHub by:
@@ -53,10 +53,10 @@ Separating out code into different files requires the use of header files (`.h`)
 Headers provide a way to share function definitions and preprocessor macros
 between two or more _C++_ files (`.cpp`). Using the header inside of another
 file requires the use of the `#include` 
-[preprocessor directive](https://en.wikipedia.org/wiki/Preprocessor),
+[preprocessor directive][preprocessor],
 which effectively "copies" the contents of the header into the other file.
 
-Take for instance the [`routineA.cpp`](https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/routineA.cpp) file.
+Take for instance the [`routineA.cpp`][routinea-cpp] file.
 
 ```cpp
 #include <Rcpp.h>
@@ -77,10 +77,10 @@ Note, there are two different kinds of `#include` used:
 - `#include "header_local.h"`
     - `""` means the file resides in the working directory of the program.
 
-For more details, please see [Section 2.1 Include Syntax](https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html#Include-Syntax)
-of the [`gcc` documentation](https://gcc.gnu.org/onlinedocs/cpp/index.html#SEC_Contents).
+For more details, please see [Section 2.1 Include Syntax][include-syntax]
+of the [`gcc` documentation][gcc-docs].
 
-The accompanying header file would be [`routineA.h`](https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/routineA.h). The header would
+The accompanying header file would be [`routineA.h`][routinea-h]. The header would
 contain the function definition for `calc_A_routine()` as it is the only
 function declared within the file.
 
@@ -98,7 +98,7 @@ Rcpp::NumericVector calc_A_routine(Rcpp::NumericVector x);
 
 As the header contents is "copied", it is important to protect the function
 definitions to ensure they are only included once. To prevent this from happening,
-an [inclusion guard](https://en.wikipedia.org/wiki/Include_guard) is
+an [inclusion guard][include-guard] is
 used. By checking for whether a variable is defined with `#ifndef`, the header
 file can be copied completely or skip the define portion. In short, the
 design pattern for this can be succiently stated as:
@@ -113,7 +113,7 @@ design pattern for this can be succiently stated as:
 ```
 
 From here, both routines A and B can be included inside a third file
-such as [`combined-routines.cpp`](https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/combined-routines.cpp). The inclusion statements would be:
+such as [`combined-routines.cpp`][combined-routines-cpp]. The inclusion statements would be:
 
 ```cpp
 #include <Rcpp.h>
@@ -128,3 +128,14 @@ such as [`combined-routines.cpp`](https://github.com/r-pkg-examples/rcpp-headers
 ## License
 
 GPL (\>= 2)
+
+[combined-routines-cpp]: https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/combined-routines.cpp
+[compiler-macos]: http://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-os-x/
+[compiler-windows]: http://thecoatlessprofessor.com/programming/rcpp/install-rtools-for-rcpp/
+[gcc-docs]: https://gcc.gnu.org/onlinedocs/cpp/index.html#SEC_Contents
+[include-guard]: https://en.wikipedia.org/wiki/Include_guard
+[include-syntax]: https://gcc.gnu.org/onlinedocs/cpp/Include-Syntax.html#Include-Syntax
+[preprocessor]: https://en.wikipedia.org/wiki/Preprocessor
+[routinea-cpp]: https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/routineA.cpp
+[routinea-h]: https://github.com/r-pkg-examples/rcpp-headers-src/blob/master/src/routineA.h
+[subdirsrc]: https://github.com/r-pkg-examples/rcpp-headers-subdirs
